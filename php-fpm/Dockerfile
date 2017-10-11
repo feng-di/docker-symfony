@@ -3,7 +3,9 @@ FROM alpine:3.6
 LABEL maintainer="Vincent Composieux <vincent.composieux@gmail.com>"
 
 RUN apk add --update \
+    php7-common \
     php7-fpm \
+    php7-session \
     php7-apcu \
     php7-ctype \
     php7-curl \
@@ -19,6 +21,7 @@ RUN apk add --update \
     php7-openssl \
     php7-pdo \
     php7-pdo_mysql \
+    php7-pdo_sqlite \
     php7-mysqli \
     php7-xml \
     php7-zlib \
