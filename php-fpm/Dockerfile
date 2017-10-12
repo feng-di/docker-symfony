@@ -1,4 +1,4 @@
-FROM alpine:3.6
+FROM alpine:edge
 
 LABEL maintainer="Vincent Composieux <vincent.composieux@gmail.com>"
 
@@ -15,6 +15,7 @@ RUN apk add --update \
     php7-imagick \
     php7-json \
     php7-intl \
+    php7-posix \
     php7-mcrypt \
     php7-mbstring \
     php7-opcache \
@@ -27,6 +28,7 @@ RUN apk add --update \
     php7-zlib \
     php7-phar \
     php7-tokenizer \
+    php7-simplexml \
     make \
     curl
 
