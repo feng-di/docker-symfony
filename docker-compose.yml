@@ -9,6 +9,8 @@ services:
             MYSQL_DATABASE: symfony
             MYSQL_USER: symfony
             MYSQL_PASSWORD: symfony
+        volumes:
+            - ./data/mysql:/var/lib/mysql
     php:
         build: ./php-fpm
         ports:
@@ -21,7 +23,7 @@ services:
     nginx:
         build: ./nginx
         ports:
-            - "82:80"
+            - "8082:80"
         links:
             - php
         volumes_from:
