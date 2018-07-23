@@ -28,7 +28,9 @@ RUN apk add --update \
     php7-zlib \
     php7-phar \
     php7-tokenizer \
+    php7-session \
     php7-simplexml \
+    php7-xdebug \
     make \
     curl
 
@@ -38,6 +40,7 @@ RUN curl --insecure https://getcomposer.org/composer.phar -o /usr/bin/composer &
 
 ADD symfony.ini /etc/php7/php-fpm.d/
 ADD symfony.ini /etc/php7/cli/conf.d/
+ADD xdebug.ini  /etc/php7/conf.d/
 
 ADD symfony.pool.conf /etc/php7/php-fpm.d/
 
